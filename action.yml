@@ -1,4 +1,4 @@
-name: 'Merging branches'
+name: 'AS || Merge branches'
 description: 'Merge a source branch into a target branch'
 inputs:
   github_token:
