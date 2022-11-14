@@ -1,0 +1,22 @@
+name: 'Merging branches'
+description: 'Merge a source branch into a target branch'
+inputs:
+  github_token:
+    description: 'Token used to authenticate with GitHub when performing the merge command.'
+    required: true
+  source_branch:
+    description: 'Branch name that you wish to merge into the target branch.'
+    required: false
+    default: ${{ github.ref }}
+  target_branch:
+    description: 'Branch you are merging the source branch into.'
+    required: true
+  commit_message:
+    description: 'Commit message.'
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'git-merge'
+  color: 'green'
